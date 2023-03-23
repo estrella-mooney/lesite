@@ -1,5 +1,4 @@
 exports.seed = async function (knex) {
-  // await knex('turtles').del()
   await knex('countries').insert([
     {
       id: 1,
