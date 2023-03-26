@@ -1,32 +1,22 @@
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
 import { ImageDetails } from '../../common/Images'
-import { getImages } from '../api/images'
+import { getImages } from '../api/apiImages'
 
 function Images() {
-  const [imagesObj, setImageObj] = useState(null as ImageDetails | null)
-
-  const clickHandler = () => {
-    return getImages()
-      .then((obj) => {
-      setImageObj(obj)
-      })
-      .catch((err) => console.log(err.message))
-  }
+  const [imagesObj, setImagesObj] = useState<ImageDetails[]>([])
+  }, [])
 
   return (
     <>
       <div className="flex">
         <h1>Hello and Welcome</h1>
-        <button className="button" onClick={clickHandler}>
-          Click here to find out :){' '}
-        </button>
-        {imagesObj && (
-          <div>
-            <p>Latitude: {imagesObj?.country_name}</p>
-            <p>Longitude: {imagesObj?.description}</p>
-          </div>
-        )}
+        {imagesObj &&
+          imagesObj.map((image) => (
+            <div key={image.country_name}>
+              <p>Country Name: {image.country_name}</p>
+              <p>Description: {image.description}</p>
+            </div>
+          ))}
       </div>
     </>
   )
