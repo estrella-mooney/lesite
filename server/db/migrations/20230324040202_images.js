@@ -6,6 +6,7 @@ exports.up = function (knex) {
   //adding table
   return knex.schema.createTable('images', (table) => {
     table.increments('id').primary()
+    table.string('countryName')
     table.string('description')
   })
 }
