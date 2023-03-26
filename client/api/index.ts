@@ -1,5 +1,9 @@
 import request from 'superagent'
 
-import { Images } from '../../common/Images'
+import { ImageDetails } from '../../common/Images'
 
-export function getImages(): Promise {}
+const imagesURL = '/api/v1/images/'
+
+export function getImages(): Promise<ImageDetails[]> {
+  return request.get(imagesURL).then((images) => images.body)
+}
