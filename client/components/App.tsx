@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getGreeting } from '../apiClient'
-import { getImages } from '../api'
+import { getImages } from '../api/images'
 
 const App = () => {
   return (
