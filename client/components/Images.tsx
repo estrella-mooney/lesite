@@ -1,25 +1,18 @@
 import { useState, useEffect } from 'react'
 import { ImageDetails } from '../../common/Images'
-import { getImages } from '../api/apiImages'
+// import { getImages } from '../api/apiImages'
 
-function Images() {
-  const [imagesObj, setImagesObj] = useState<ImageDetails[]>([])
-  }, [])
-
-  return (
-    <>
-      <div className="flex">
-        <h1>Hello and Welcome</h1>
-        {imagesObj &&
-          imagesObj.map((image) => (
-            <div key={image.country_name}>
-              <p>Country Name: {image.country_name}</p>
-              <p>Description: {image.description}</p>
-            </div>
-          ))}
-      </div>
-    </>
-  )
+interface Props {
+  imageProp: ImageDetails
 }
 
+function Images(props: Props) {
+  const { description, country_name } = props.imageProp
+  return (
+    <div className="widget-container">
+      <h1>{country_name}</h1>
+      <p>Price: {description}</p>
+    </div>
+  )
+}
 export default Images
