@@ -6,5 +6,5 @@ import { ImageDetails } from '../../common/Images'
 // }
 
 export function getAllImages(db = connection): Promise<ImageDetails[]> {
-  return db('images').select('*')
+  return db('images').select('*', 'countryName AS country_name')
 }

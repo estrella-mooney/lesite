@@ -20,7 +20,7 @@ function Images() {
           return (
             <div key={image.id}>
               <p>{image.description}</p>
-              <p>{image.countryName}</p>
+              <p>{image.country_name}</p>
             </div>
           )
         })}
