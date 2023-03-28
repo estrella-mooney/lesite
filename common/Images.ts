@@ -1,5 +1,5 @@
 export interface ImageDetails {
   id: number
-  country_name: string
+  countryName: string
   description: string
 }

@@ -17,7 +17,12 @@ function Images() {
     <div>
       {images &&
         images.map((image) => {
-          return <p key={image.id}>{image.description}</p>
+          return (
+            <div key={image.id}>
+              <p>{image.description}</p>
+              <p>{image.countryName}</p>
+            </div>
+          )
         })}
       {/* <h1>{images?.country_name}</h1>
       <p>Description: {images?.description}</p> */}
