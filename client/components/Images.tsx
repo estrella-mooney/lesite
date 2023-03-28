@@ -21,11 +21,14 @@ function Images() {
             <div key={image.id}>
               <p>{image.description}</p>
               <p>{image.country_name}</p>
+              <img
+                className="imageSize"
+                src={image.path}
+                alt="Mountain and lakes"
+              />
             </div>
           )
         })}
-      {/* <h1>{images?.country_name}</h1>
-      <p>Description: {images?.description}</p> */}
     </div>
   )
 }

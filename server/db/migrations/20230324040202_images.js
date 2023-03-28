@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.increments('id').primary()
     table.string('countryName')
     table.string('description')
+    table.string('path')
   })
 }
 
