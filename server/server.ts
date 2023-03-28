@@ -11,7 +11,7 @@ server.use(express.static(join(__dirname, './public')))
 server.use(cors('*' as CorsOptions))
 
 server.use('/api/v1/welcome', welcome)
-server.use('/api/v1/images/', images)
+server.use('/api/v1/images', images)
 
 // server.get('/greeting', (req, res) => {
 //   const greetings = ['hola', 'hi', 'hello', 'howdy']

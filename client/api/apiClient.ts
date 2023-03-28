@@ -17,5 +17,5 @@ export function getGreeting(): Promise<string> {
 // }
 
 export function getAllImages(): Promise<ImageDetails[]> {
-  return request.get('/images').then((i) => i.body)
+  return request.get('/api/v1/images').then((i) => i.body)
 }
