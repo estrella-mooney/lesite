@@ -8,12 +8,16 @@ import Header from './Header'
 
 function App() {
   return (
-    <Container>
-      <Header />
-      <div className="App">
-        <Images />
-      </div>
-    </Container>
+    <>
+      <img className="HeaderImage" src="./images/image1.jpg" alt="Header" />
+
+      <Container>
+        <Header />
+        <div className="App">
+          <Images />
+        </div>
+      </Container>
+    </>
   )
 }
 

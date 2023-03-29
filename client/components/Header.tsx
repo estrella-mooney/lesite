@@ -36,16 +36,20 @@ function Header() {
                 textColor="inherit"
                 value={value}
                 onChange={(e, value) => setValue(value)}
-                indicatorColor="secondary"
+                indicatorColor="primary"
               >
                 {PAGES.map((page, index) => (
                   <Tab key={index} label={page} />
                 ))}
               </Tabs>
-              <Button sx={{ marginLeft: 'auto' }} variant="contained">
+              <Button variant="contained" sx={{ marginLeft: 'auto' }}>
                 Login{' '}
               </Button>
-              <Button sx={{ marginLeft: '10px' }} variant="contained">
+              <Button
+                className="loginButton"
+                sx={{ marginLeft: '10px' }}
+                variant="contained"
+              >
                 SignUp
               </Button>
             </>
