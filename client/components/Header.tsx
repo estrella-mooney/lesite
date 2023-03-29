@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AppBar, Typography, Toolbar, Tab, Tabs, Button } from '@mui/material'
+import DrawerComp from './Drawer'
 
 function Header() {
   const [value, setValue] = useState()
@@ -25,6 +26,7 @@ function Header() {
             SignUp
           </Button>
         </Toolbar>
+        <DrawerComp />
       </AppBar>
     </React.Fragment>
   )
