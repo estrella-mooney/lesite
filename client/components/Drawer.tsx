@@ -7,7 +7,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material'
-import MenuIcon from '@mui/icons-material'
+import MenuIcon from '@mui/icons-material/Menu'
+
+const PAGES = ['Home', 'About', 'Gallery', 'Contact', 'Login', 'Logout']
 
 function DrawerComp() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -15,14 +17,19 @@ function DrawerComp() {
     <React.Fragment>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
-          <ListItemButton>
-            <ListItemIcon>
-              <ListItemText>Example</ListItemText>
-            </ListItemIcon>
-          </ListItemButton>
+          {PAGES.map((page, index) => (
+            <ListItemButton key={index}>
+              <ListItemIcon>
+                <ListItemText>{page}</ListItemText>
+              </ListItemIcon>
+            </ListItemButton>
+          ))}
         </List>
       </Drawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton
+        sx={{ color: 'white', marginLeft: 'auto' }}
+        onClick={() => setOpenDrawer(!openDrawer)}
+      >
         <MenuIcon></MenuIcon>
       </IconButton>
     </React.Fragment>
