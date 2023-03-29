@@ -24,12 +24,15 @@ function Header() {
         <Toolbar>
           {isMatch ? (
             <>
-              <Typography>Home</Typography>
+              <Typography sx={{ fontSize: '1.3rem', paddingLeft: '2.5%' }}>
+                Home
+              </Typography>
               <DrawerComp />
             </>
           ) : (
             <>
               <Tabs
+                sx={{ marginLeft: 'auto' }}
                 textColor="inherit"
                 value={value}
                 onChange={(e, value) => setValue(value)}

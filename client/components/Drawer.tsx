@@ -18,12 +18,12 @@ function DrawerComp() {
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
           {PAGES.map((page, index) => (
-            <ListItemButton key={index}>
+            <ListItemButton onClick={() => setOpenDrawer(false)} key={index}>
               <ListItemIcon>
                 <ListItemText>{page}</ListItemText>
               </ListItemIcon>
             </ListItemButton>
-          ))}
+          ))} 
         </List>
       </Drawer>
       <IconButton
