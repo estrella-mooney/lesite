@@ -3,18 +3,18 @@ import React from 'react'
 import { BUTTON_TYPES } from '../../../common/convention/button'
 import './button.scss'
 
-const Button = (props) => {
+function Button(props: any) {
   const { type, btnText } = props
   const getButtonClass = () => {
     switch (type) {
       case BUTTON_TYPES.PRIMARY:
-        return 'primarybtn button'
+        return 'primaryBtn button'
 
       case BUTTON_TYPES.SECONDARY:
-        return 'secondarybtn button'
+        return 'secondaryBtn button'
 
       default:
-        return 'tertiarybtn button'
+        return 'tertiaryBtn button'
     }
   }
   return <div className={`${getButtonClass()}`}>{btnText}</div>

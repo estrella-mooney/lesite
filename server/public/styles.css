@@ -3,6 +3,28 @@
   \*******************************************************************************************************************************/
 .button {
   margin: 6px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryBtn {
+  background-color: aquamarine;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.secondaryBtn {
+  background-color: rgb(255, 127, 246);
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.2px;
 }
 /*!*******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./client/styles/index.scss ***!
@@ -38,10 +60,6 @@ p {
   top: 250px;
   left: 450px;
   z-index: 2;
-}
-
-.Button:contained {
-  background-color: red;
 }
 
 .button-wrapper {
