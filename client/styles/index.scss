@@ -1,10 +1,20 @@
+
+body {
+ margin: unset; 
+}
+//   *{
+//   box-sizing: border-box;
+// }
+
 .imageSize {
   height: auto;
   max-width: 100%;
+
+
 }
 
-.App {
-padding-top: 100px;
+.AppMain {
+padding-top: 50px;
 }
 
 
@@ -15,8 +25,17 @@ p {
 }
 
 .HeaderImage {
-  background-size: cover; 
-  height:600px; 
+  height: 80%;
+  max-width: 100%;  
+  z-index: 1;
+
+}
+
+.logoImage {
+  position:absolute;
+  top: 175px;
+  left: 400px;
+  z-index: 2;
 }
 
 

@@ -9,14 +9,17 @@ import Header from './Header'
 function App() {
   return (
     <>
-      <img className="HeaderImage" src="./images/image1.jpg" alt="Header" />
+      <div className="AppMain">
+        <img className="HeaderImage" src="./images/image1.jpg" alt="Header" />
+        <img className="logoImage" src="./images/logo.png" alt="Logo" />
 
-      <Container>
-        <Header />
-        <div className="App">
-          <Images />
-        </div>
-      </Container>
+        <Container>
+          <Header />
+          <div className="App">
+            <Images />
+          </div>
+        </Container>
+      </div>
     </>
   )
 }
