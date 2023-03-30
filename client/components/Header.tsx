@@ -10,6 +10,7 @@ import {
   useTheme,
 } from '@mui/material'
 import DrawerComp from './Drawer'
+import { green } from '@mui/material/colors'
 
 const PAGES = ['Home', 'About', 'Gallery', 'Contact']
 
@@ -42,12 +43,19 @@ function Header() {
                   <Tab key={index} label={page} />
                 ))}
               </Tabs>
-              <Button variant="contained" sx={{ marginLeft: 'auto' }}>
+              <Button
+                variant="contained"
+                sx={{
+                  marginLeft: 'auto',
+                  backgroundColor: green[500],
+                  '&:hover': { backgroundColor: green[700] },
+                }}
+              >
                 Login{' '}
               </Button>
               <Button
                 className="loginButton"
-                sx={{ marginLeft: '10px' }}
+                sx={{ marginLeft: '10px', borderRadius: 50 }}
                 variant="contained"
               >
                 SignUp
