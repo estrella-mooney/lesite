@@ -27,9 +27,10 @@ p {
 }
 
 .logoImage {
+  max-width: 350px;
   position: absolute;
-  top: 175px;
-  left: 400px;
+  top: 250px;
+  left: 450px;
   z-index: 2;
 }
 
