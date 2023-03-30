@@ -10,14 +10,32 @@ import {
   useTheme,
 } from '@mui/material'
 import DrawerComp from './Drawer'
-import { green } from '@mui/material/colors'
+import { grey } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 
 const PAGES = ['Home', 'About', 'Gallery', 'Contact']
 
 function Header() {
   const [value, setValue] = useState()
-  const theme = useTheme()
+  // const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down('md'))
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#3f50b5',
+        dark: '#002884',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#ff7961',
+        main: '#f44336',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+    },
+  })
 
   return (
     <React.Fragment>
@@ -47,7 +65,7 @@ function Header() {
                 variant="contained"
                 sx={{
                   marginLeft: 'auto',
-                  backgroundColor: green[500],
+                  backgroundColor: theme.light,
                   '&:hover': { backgroundColor: green[700] },
                 }}
               >
