@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react'
-import { getAllImages, getGreeting } from '../api/apiClient'
 // import { Routes, Route } from 'react-router-dom'
-import { ImageDetails } from '../../common/Images'
 import Images from './Images'
 import { Container } from '@mui/material'
-import Header from './Header'
-import { BUTTON_TYPES } from '../../common/convention/button'
 
 //
 
@@ -17,7 +13,7 @@ function App() {
         <img className="logoImage" src="./images/logo.png" alt="Logo" />
       </div>
       <Container>
-        <Header />
+        {/* <Header /> */}
         <div className="App">
           <Images />
         </div>

@@ -1,6 +1,15 @@
-// import { styled } from '@mui/material/styles'
-// import MuiButton from '@mui/material/Button'
+import React from 'react'
+import { ThemeProvider, Button } from '@mui/material'
+import theme from './ButtonTheme'
 
-// export const MainButton = styled(MuiButton)(({ theme, pill }) => ({
-//   borderRadius: pill ? theme.shape.pillRadius : theme.shape.borderRadius,
-// }))
+function testButton() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Button variant="contained" color="primary">
+        Click me !
+      </Button>
+    </ThemeProvider> //-----> If i put this code on App it works. But not trying to use it from here
+  )
+}
+
+export default testButton
