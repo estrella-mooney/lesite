@@ -1,4 +1,4 @@
-import { blue, blueGrey } from '@mui/material/colors'
+import { blueGrey } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 
 const ButtonTheme = createTheme({

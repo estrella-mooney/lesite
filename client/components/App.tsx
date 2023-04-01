@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 // import { Routes, Route } from 'react-router-dom'
-import Images from './Images'
+import Images from './homepg/Images'
 import { Container } from '@mui/material'
+import Header from './navbar/Header'
 
 //
 
@@ -13,7 +14,7 @@ function App() {
         <img className="logoImage" src="./images/logo.png" alt="Logo" />
       </div>
       <Container>
-        {/* <Header /> */}
+        <Header />
         <div className="App">
           <Images />
         </div>

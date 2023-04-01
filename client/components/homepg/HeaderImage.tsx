@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { ImageDetails } from '../../common/Images'
-import { getAllImages } from '../api/apiClient'
+import { ImageDetails } from '../../../common/Images'
+import { getAllImages } from '../../api/apiClient'
 
 function Images() {
   const [images, setImages] = useState(null as ImageDetails[] | null)
