@@ -1,24 +1,25 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+
 // import { Routes, Route } from 'react-router-dom'
 import Images from './homepg/Images'
-import { Container } from '@mui/material'
+import { Container, ThemeProvider } from '@mui/material'
 import Header from './navbar/Header'
+import ButtonTheme from './button/ButtonTheme'
+import NavBar from './navbar/Navbar'
 
 //
+import Home from './Home'
 
 function App() {
   return (
     <>
-      <div className="AppMain">
-        <img className="HeaderImage" src="./images/image1.jpg" alt="Header" />
-        <img className="logoImage" src="./images/logo.png" alt="Logo" />
-      </div>
-      <Container>
-        <Header />
-        <div className="App">
-          <Images />
-        </div>
-      </Container>
+      <ThemeProvider theme={ButtonTheme}>
+        <NavBar />
+        <Routes>
+          <Route path="/api/v1/welcome" element={<Home />} />
+        </Routes>
+      </ThemeProvider>
     </>
   )
 }
