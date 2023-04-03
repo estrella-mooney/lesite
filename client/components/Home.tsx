@@ -4,9 +4,9 @@ import { Routes, Route } from 'react-router-dom'
 // import { Routes, Route } from 'react-router-dom'
 import Images from './homepg/Images'
 import { Container, ThemeProvider } from '@mui/material'
-import Header from './navbar/Header'
+// import Header from './navbar/Header'
 
-function App() {
+function Home() {
   return (
     <>
       <div className="AppMain">
@@ -14,7 +14,7 @@ function App() {
         <img className="logoImage" src="./images/logo.png" alt="Logo" />
       </div>
       <Container>
-        <Header /> {/* Later change this to NavBar */}
+        {/* <Header /> Later change this to NavBar */}
         <div className="App">
           <Images />
         </div>
@@ -23,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

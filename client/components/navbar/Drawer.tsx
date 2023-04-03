@@ -23,7 +23,7 @@ function DrawerComp() {
                 <ListItemText>{page}</ListItemText>
               </ListItemIcon>
             </ListItemButton>
-          ))} 
+          ))}
         </List>
       </Drawer>
       <IconButton

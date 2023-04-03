@@ -9,7 +9,6 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material'
-import DrawerComp from './Drawer'
 
 import { ThemeProvider } from '@mui/material'
 import ButtonTheme from '../button/ButtonTheme'
@@ -28,7 +27,6 @@ export default function Header() {
           {isMatch ? (
             <>
               <Typography>Home</Typography>
-              <DrawerComp />
             </>
           ) : (
             <>
