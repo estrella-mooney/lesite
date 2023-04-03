@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 // import { Routes, Route } from 'react-router-dom'
 import Images from './homepg/Images'
 import { Container, ThemeProvider } from '@mui/material'
+import Test from './homepg/Test'
 // import Header from './navbar/Header'
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
         <div className="App">
           <Images />
         </div>
+        <Test />
       </Container>
     </>
   )
