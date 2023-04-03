@@ -6,7 +6,7 @@ import Images from './homepg/Images'
 import { Container, ThemeProvider } from '@mui/material'
 // import Header from './navbar/Header'
 import ButtonTheme from './button/ButtonTheme'
-import NavBar from './navbar/Navbar'
+// import NavBar from './navbar/Navbar'
 
 //
 import Home from './Home'

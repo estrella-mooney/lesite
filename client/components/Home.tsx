@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <div className="AppMain">
-        <img className="HeaderImage" src="./images/image1.jpg" alt="Header" />
+        <img className="HeaderImage" src="./images/8.png" alt="Header" />
         <img className="logoImage" src="./images/logo.png" alt="Logo" />
       </div>
       <Container>
