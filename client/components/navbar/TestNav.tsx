@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -13,6 +14,13 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { Link } from 'react-router-dom'
+import {
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material'
 
 const pages = ['Home', 'About']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -38,6 +46,8 @@ function ResponsiveAppBar() {
     setAnchorElUser(null)
   }
 
+  const [openDrawer, setOpenDrawer] = React.useState(false)
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -61,8 +71,8 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}> */}
+          {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -70,9 +80,10 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
+              {/* <MenuIcon /> */}
+          {/* </IconButton>  */}
+
+          {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -89,21 +100,21 @@ function ResponsiveAppBar() {
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Link
-                      style={{ textDecoration: 'none', color: 'white' }}
-                      to={`/${page}`}
-                    >
-                      {page}
-                    </Link>
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+            > */}
+          {pages.map((page) => (
+            <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">
+                <Link
+                  style={{ textDecoration: 'none', color: 'white' }}
+                  to={`/${page}`}
+                >
+                  {page}
+                </Link>
+              </Typography>
+            </MenuItem>
+          ))}
+          {/* </Menu>
+          </Box> */}
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -123,7 +134,7 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -139,6 +150,56 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+          {/* <React.Fragment>
+            <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+              <List>
+                {pages.map((page, index) => (
+                  <ListItemButton
+                    onClick={() => setOpenDrawer(false)}
+                    key={index}
+                  >
+                    <ListItemIcon>
+                      <ListItemText>{page}</ListItemText>
+                    </ListItemIcon>
+                  </ListItemButton>
+                ))}
+              </List>
+            </Drawer>
+            <IconButton
+              sx={{ color: 'white', marginLeft: 'auto' }}
+              onClick={() => setOpenDrawer(!openDrawer)}
+            >
+              <MenuIcon></MenuIcon>
+            </IconButton>
+          </React.Fragment> */}
+
+          <React.Fragment>
+            <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+              <List>
+                {pages.map((page, index) => (
+                  <ListItemButton
+                    onClick={() => setOpenDrawer(false)}
+                    key={index}
+                  >
+                    <ListItemIcon>
+                      <ListItemText>{page}</ListItemText>
+                    </ListItemIcon>
+                  </ListItemButton>
+                ))}
+              </List>
+            </Drawer>
+            <IconButton
+              sx={{
+                color: 'white',
+                marginLeft: 'auto',
+                flexGrow: 1,
+                display: { xs: 'flex', md: 'none' },
+              }}
+              onClick={() => setOpenDrawer(!openDrawer)}
+            >
+              <MenuIcon></MenuIcon>
+            </IconButton>
+          </React.Fragment>
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
