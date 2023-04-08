@@ -1,4 +1,6 @@
 
+
+
 body {
  margin: unset; 
 }
@@ -24,12 +26,12 @@ p {
   color: rgb(174, 24, 49)
 }
 
-.HeaderImage {
-  height: 80%;
-  max-width: 100%;  
-  z-index: 1;
+// .HeaderImage {
+//   height: 80%;
+//   max-width: 100%;  
+//   z-index: 1;
 
-}
+// }
 
 .logoImage {
   // height: auto;
@@ -48,3 +50,4 @@ p {
   display: flex;
   flex-direction: column;
 }
+

@@ -20,12 +20,6 @@ p {
   color: rgb(174, 24, 49);
 }
 
-.HeaderImage {
-  height: 80%;
-  max-width: 100%;
-  z-index: 1;
-}
-
 .logoImage {
   max-width: 350px;
   position: absolute;
