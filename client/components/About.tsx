@@ -33,6 +33,8 @@ function About() {
           </Button>
         </CardActions>
       </Card>
+
+      <p>LeSite is a business operated</p>
     </div>
   )
 }
